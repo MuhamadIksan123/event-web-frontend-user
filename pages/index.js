@@ -16,12 +16,12 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <Header /> */}
+      <Header />
       <Brand />
       <CardEvent data={data} title="Featured Events" subTitle="Grow Today" />
-      {/* <Stories /> */}
-      {/* <Statistics />
-      <Footer /> */}
+      <Stories />
+      <Statistics />
+      <Footer />
     </>
   );
 }

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import NavLink from '../NavLink';
 import { useRouter } from 'next/router';
 import Cookies from 'js-cookie';
+import Button from '../Button';
 
 export default function Navbar() {
   const router = useRouter();
@@ -23,8 +24,10 @@ export default function Navbar() {
   return (
     <nav className="container navbar navbar-expand-lg navbar-dark">
       <div className="container-fluid">
-        <Link href={'/'} className="navbar-brand">
-          <img src="/images/logo.svg" alt="semina" />
+        <Link href={'/'}>
+          <a className="navbar-brand">
+            <img src="/images/logo.svg" alt="semina" />
+          </a>
         </Link>
         <button
           className="navbar-toggler"
@@ -85,8 +88,8 @@ export default function Navbar() {
                       aria-labelledby="navbarDropdown"
                     >
                       <li>
-                        <Link href={'/dashboard'} className="dropdown-item">
-                          Dashboard
+                        <Link href={'/dashboard'}>
+                          <a className="dropdown-item">Dashboard</a>
                         </Link>
                       </li>
                       <li>
@@ -130,8 +133,8 @@ export default function Navbar() {
                 </div>
               ) : (
                 <div className="d-grid">
-                  <Link href={'/signin'} className="btn-navy">
-                    Sign In
+                  <Link href={'/signin'}>
+                    <a className="btn-navy">Sign In</a>
                   </Link>
                 </div>
               )}

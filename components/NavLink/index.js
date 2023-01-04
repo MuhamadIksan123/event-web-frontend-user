@@ -6,13 +6,14 @@ export default function NavLink({ href, children }) {
   // console.log(useRouter());
   const router = useRouter();
   return (
-    (<Link
+    <Link
       href={href}
       className={`nav-link  ${router.pathname === href ? 'active' : ''}`}
-      aria-current="page">
+      aria-current="page"
+      legacyBehavior>
 
-      {children}
+        {children}
 
-    </Link>)
+      </Link>
   );
 }
