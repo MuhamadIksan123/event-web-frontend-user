@@ -53,7 +53,7 @@ export default function Navbar() {
           </div>
 
           {router.pathname !== '/signin' && (
-            <>
+            <div className="d-grid">
               {token ? (
                 <div className="navbar-nav ms-auto">
                   <div className="nav-item dropdown d-flex flex-column flex-lg-row align-items-lg-center authenticated gap-3">
@@ -125,20 +125,18 @@ export default function Navbar() {
                           </a>
                         </li>
                         <li onClick={() => handleLogout()}>
-                          <a className="list-group-item"></a>
+                          <a className="list-group-item">Logout</a>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
               ) : (
-                <div className="d-grid">
-                  <Link href={'/signin'}>
-                    <a className="btn-navy">Sign In</a>
-                  </Link>
-                </div>
+                <Link href={'/signin'}>
+                  <a className="btn-navy">Sign In</a>
+                </Link>
               )}
-            </>
+            </div>
           )}
         </div>
       </div>
